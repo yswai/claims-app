@@ -1,0 +1,54 @@
+<?xml version='1.0' encoding='utf-8'?>
+<!--
+  ~ Hibernate, Relational Persistence for Idiomatic Java
+  ~
+  ~ License: GNU Lesser General Public License (LGPL), version 2.1 or later.
+  ~ See the lgpl.txt file in the root directory or <http://www.gnu.org/licenses/lgpl-2.1.html>.
+  -->
+<!DOCTYPE hibernate-configuration PUBLIC
+        "-//Hibernate/Hibernate Configuration DTD 3.0//EN"
+        "http://www.hibernate.org/dtd/hibernate-configuration-3.0.dtd">
+
+<hibernate-configuration>
+
+    <session-factory>
+
+        <!-- Database connection settings -->
+        <property name="connection.driver_class">com.mysql.jdbc.Driver</property>
+        <property name="connection.url">jdbc:mysql://localhost:3306/ecs</property>
+        <property name="connection.username">root</property>
+        <property name="connection.password">1111</property>
+
+        <!-- JDBC connection pool (use the built-in) -->
+        <property name="connection.pool_size">1</property>
+
+        <!-- SQL dialect -->
+        <property name="dialect">org.hibernate.dialect.MySQL5InnoDBDialect</property>
+
+        <!-- Disable the second-level cache  -->
+        <property name="cache.provider_class">org.hibernate.cache.internal.NoCacheProvider</property>
+
+        <!-- Echo all executed SQL to stdout -->
+        <property name="show_sql">true</property>
+
+        <!-- Drop and re-create the database schema on startup -->
+        <property name="hbm2ddl.auto">update</property>
+<!--         <property name="hbm2ddl.auto">update</property>
+ -->
+ <!-- Names of the annotated entity class -->
+<!-- 	    <mapping class="com.trovicor.UserDetail"/>
+		<mapping class="com.trovicor.User"/> -->
+		<!-- <mapping class="com.trovicor.User2"/> -->
+		<mapping class="com.trovicor.Employee"/>
+		<mapping class="com.trovicor.Projects"/>
+		<mapping class="com.trovicor.EmployeeProjects"/>
+		<mapping class="com.trovicor.EmployeeTrips"/>
+		<mapping class="com.trovicor.Trips"/>
+		<mapping class="com.trovicor.Expense"/>
+		<mapping class="com.trovicor.ExpTypeBudget"/>
+
+		
+
+    </session-factory>
+
+</hibernate-configuration>

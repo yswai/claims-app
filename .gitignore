@@ -1,0 +1,8 @@
+/build
+/target
+/src/main/webapp/receipts 
+.idea
+.project
+.classpath
+.mvn
+.settings

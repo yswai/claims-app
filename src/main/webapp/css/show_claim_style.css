@@ -1,0 +1,14 @@
+@CHARSET "ISO-8859-1";
+h3{
+	margin-bottom: 5px;
+	margin-top: 5px;
+}
+img{
+    height: auto;
+    max-width: 100%;
+
+}
+.modal-body{
+	height : 500PX;
+	overflow-y : auto;
+}
